@@ -1,0 +1,91 @@
+
+.equipe {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.person {
+    justify-content: center;
+    text-align: center;
+    min-width: 300px;
+    padding: 15px;
+}
+
+.person > .personElement {
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray ;
+}
+
+.person > img {
+    border-radius: 100%;
+    width: 300px;
+    max-width: 100%;
+}
+
+.person > .personElement > .aka {
+    color: grey;
+}
+.person > .personElement > .serie{
+    font-weight: light!important;
+    color: rgb(199, 0, 0);
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.person > .personElement > .serie:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.person > .personElement > .serie:hover:after {
+    width: 40%;
+    background: rgb(199, 0, 0);
+}
+
+.person > .title {
+    color: white!important;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+.person > .title:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.person > .title:hover:after {
+    width: 40%;
+    background: white;
+}
+
+.person > .subtitle {
+    padding-bottom: 20px;
+    border-bottom: 2px solid white ;
+}
+
+.equipe > .person .progress {
+    height: 25px;
+}
+
+.equipe > .person .progress-bar {
+    color: black!important;
+    font-weight: bolder;
+    font-size: 15px;
+}

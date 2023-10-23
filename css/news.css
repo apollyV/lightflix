@@ -1,0 +1,164 @@
+.newsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 0;
+	padding: 70px 40px 90px;
+	background-color: #000;
+	background-image: url('../images/news-bg-chad-montano-MqT0asuoIcU-unsplash.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.newsContainer:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 0;
+	width: 100%;
+	background-image: linear-gradient(#222, #222), linear-gradient(45deg, transparent 75%, #222 75%), linear-gradient(-45deg, transparent 75%, #222 75%);
+	background-position: 0 0, 0 0, 0 0, 0 100%, 0 100%;
+	background-size: auto auto, 15px 15px, 15px 15px, 15px 15px, 15px 15px;
+	background-clip: padding-box, border-box, border-box, border-box, border-box;
+	background-origin: padding-box, border-box, border-box, border-box, border-box;
+	border: solid transparent;
+	border-width: 5px 0;
+	background-repeat: repeat, repeat-x, repeat-x, repeat-x, repeat-x;
+	transform: scaleY(-1);
+}
+.newsContainer:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	background-image: linear-gradient(90deg, #121618aa 30%, #12161800 90%);
+	/* background-image: linear-gradient(90deg, #12161899, #e2952d55); */
+}
+.newsContainer article {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #fff;
+	font-size: 24px;
+	position: relative;
+	animation: fadeIn .8s ease, slide 1.1s cubic-bezier(.190, 1.000, .220, 1.000);
+	animation-delay: .1s;
+	animation-fill-mode: both;
+}
+.newsContainer article .closeButton {
+	position: absolute;
+	right: 20px;
+	top: -40px;
+	width: 50px;
+	height: 50px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	animation: fadeIn .6s ease, slideUp .4s cubic-bezier(.190, 1.000, .220, 1.000);
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+.newsContainer article .closeButton:hover:before {
+	transform: translateY(-2px) scale(1.2) rotate(45deg);
+}
+.newsContainer article .closeButton:hover:after {
+	transform: translateY(-2px) scale(1.2) rotate(135deg);
+}
+.newsContainer article .closeButton:before,
+.newsContainer article .closeButton:after {
+	content: '';
+	border-radius: 3px;
+	position: absolute;
+	top:50%;
+	left: 10px;
+	right: 10px;
+	border: 1px white solid;
+	transform-origin: center;
+	transform: translateY(-2px) rotate(-45deg);
+	transition: all .3s ease;
+}
+.newsContainer article .closeButton:after {
+	transform: translateY(-2px) rotate(45deg);
+}
+
+
+.newsContainer article h1, .newsContainer article p {
+	width: 80%;
+	max-width: 700px;
+	font-family: OpenSansCondensed;
+	font-weight: lighter;
+	letter-spacing: .15em;
+	animation: fadeIn .6s ease, slide .4s cubic-bezier(.190, 1.000, .220, 1.000);
+	animation-delay: .4s;
+	animation-fill-mode: both;
+}
+.newsContainer article h1 {
+	font-size: 40px;
+	position: relative;
+	margin-top: 0;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+.newsContainer article h1:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	background-color: #eee;
+	width: 60%;
+}
+
+.newsContainer article h1 strong {
+	font-family: GravitasOne;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+.newsContainer article h1 strong em {
+	font-style: normal;
+	color: #ddd;
+}
+.newsContainer article p {
+	animation-delay: .5s;
+	margin: 0;
+}
+
+.newsContainer article .spicy{
+	font-size:150%;
+	background: linear-gradient(-55deg, #cd1a1e 0%,#faa119 40%, #fecf0a 50%, #faa119 60%, #cd1a1e 100%);
+	background: linear-gradient(-55deg, #ff4548 0%,#f8b652 40%, #ffff00 50%, #f8b652 60%, #ff4548 100%);
+	background-size: 200% 200%;
+	white-space: nowrap;
+	color: #cd1a1e;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* font-style: italic; */
+	font-weight: normal;
+}
+.newsContainer article .spicy:after {
+	content: '';
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	background-image: url('../images/hot.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	/* transform-origin: bottom left; */
+}
+.newsContainer article .spicy:hover {
+	animation: slideBg .1s linear infinite;
+}
+.newsContainer article .spicy:hover:after {
+	animation: burn .01s linear infinite;
+}

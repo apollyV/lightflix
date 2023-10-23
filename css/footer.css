@@ -1,0 +1,77 @@
+
+body > footer {
+	position: relative;
+	background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../ressources/cine.jpg');
+    background-size: cover;
+	background-position: center;
+    border-top: 2px white solid;
+}
+
+body > footer {
+	color: #eee;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	flex-direction: row;
+	white-space: nowrap;
+	padding-top: 50px;
+	padding-bottom: 75px;
+	align-items: baseline;
+}
+
+body > footer > div {
+	width: 324px;
+	max-width: 100%;
+	text-align: center;
+}
+
+body > footer li {
+	list-style-type: none;
+	text-align: center;
+	padding: 5px;
+}
+
+body > footer ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+body > footer li em {
+	font-style: normal;
+	font-weight: 700;
+	display: flex;
+	flex-direction: column;
+}
+
+body > footer li a {
+	color: #eee;
+	text-decoration: none;
+}
+
+body > footer li a:hover {
+	color: #eee;
+}
+
+body > footer li a::before {
+	content: '> ';
+}
+
+body > footer li a::after {
+	content: ' <';
+}
+
+body > footer li a:hover::before {
+	color: rgb(199, 0, 0);
+}
+
+body > footer li a:hover::after {
+	color: rgb(199, 0, 0);
+}
+
+body > footer .center {
+	border-right: solid 2px #eee ;
+	border-left: solid 2px #eee ;
+}

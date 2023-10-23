@@ -1,0 +1,126 @@
+.SeriesForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.SeriesForm > .searchBar{
+    vertical-align: middle;
+}
+
+.SeriesForm > .searchBar > .searchBarInput {
+    height: 40px;
+    text-align: center;
+    min-width: 50%;
+    max-width: 100%;
+    vertical-align: middle!important;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #151515;
+    color: #eee;
+    border-radius: 7px;
+    background-image: url('../ressources/search.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.SeriesForm > .searchBar > .searchBarInput:focus,
+.SeriesForm > .searchBar > .searchBarInput:not(:placeholder-shown) {
+    background-position: right 5px center;
+}
+
+.SeriesForm > .triSection {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+
+.SeriesForm > .triSection .listTri {
+    display: flex;
+    justify-content: center;
+}
+
+.SeriesForm > .triSection li {
+    white-space: nowrap;
+    list-style-type: none;
+    
+}
+
+.SeriesForm > .triSection .center {
+    border-left: white solid 1px;
+    border-right: white solid 1px;
+}
+
+.SeriesForm > .triSection #inverserTri {
+    border: solid white 2px;
+    border-radius: 5px;
+    padding: 3px;
+    padding-top: 0px!important;
+    transform: translateY(-2px);
+}
+
+.SeriesForm > .triSection #inverserTri:hover {
+    box-shadow: 0px 0px 1px 3px rgb(199, 0, 0);
+}
+
+.SeriesForm > .triSection ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.SeriesForm > .triSection a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #eee;
+    text-decoration: none;
+}
+
+.SeriesForm > .triSection .triElement .active {
+    color: rgb(199, 0, 0);
+    text-decoration: none!important;
+}
+
+.SeriesForm > .triSection .triElement a:hover {
+    text-decoration: underline white;
+}
+
+.SeriesForm > .triSection .inverse{
+    border-color: rgb(199, 0, 0)!important;
+    color: rgb(199, 0, 0)!important;
+    box-shadow: 0px 0px 3px 3px rgb(199, 0, 0)!important;
+}
+
+.SeriesForm button {
+    align-items: center;
+    background-color: #151515;
+    color: rgb(199, 0, 0);
+    border: solid 1px rgb(199, 0, 0);
+    border-radius: 25px;
+    height: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    min-width: 50%;
+    max-width: 100%;
+}
+
+.SeriesForm button:hover {
+    box-shadow: 0px 0px 3px 3px rgb(199, 0, 0);
+}
+
+.SeriesForm button:active {
+    box-shadow: 0px 0px 1px 3px rgb(199, 0, 0);
+}
